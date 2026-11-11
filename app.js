@@ -2,7 +2,7 @@ import { createQuestions, exerciseModes, normalizeAnswer } from './engine.js';
 import { starterCards } from './vocabulary.js';
 import { parseImport, mergeCards } from './library.js';
 const KEY='lexiforge-exercises-web-v1', $=s=>document.querySelector(s), esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let cards=[], settings={deck:'all',count:10,accent:'en-GB',rate:1,autoplay:true}, view='practice', session=null, search='', libraryDeck='all', locked=false, storageError='', originalStorage='';
+let cards=[], settings={deck:'all',count:31,accent:'en-GB',rate:1,autoplay:true}, view='practice', session=null, search='', libraryDeck='all', locked=false, storageError='', originalStorage='';
 const supported='speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
 const icons={gap:'▤',choice:'☷',translation:'A↔',listening:'♫',matching:'◇',mixed:'⇄'};
 try{
